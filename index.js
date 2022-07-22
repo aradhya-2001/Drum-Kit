@@ -12,9 +12,12 @@
 //     .querySelectorAll("button")
 //     [i].addEventListener("click", playAudio("sounds/sound-" + i + ".mp3"));
 // }
+
 document.addEventListener("keydown", function (e) {
-  makeSound(e.key);
-  animation(e.key);
+  let keyy=e.key;
+  keyy=keyy.toLowerCase();
+  makeSound(keyy);
+  animation(keyy);
 });
 for (var i = 0; i < 7; i++) {
   document.querySelectorAll("button")[i].addEventListener("click", function () {
